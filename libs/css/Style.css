@@ -1,0 +1,497 @@
+html {
+    height:100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #696775;
+    z-index: -1;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/*Navbar Overrides*/
+
+#navbar {
+    box-sizing: border-box;
+    background-color: #4d4c57 !important;
+    overflow-x: hidden;
+}
+
+.navbar-brand.mb-0.h1 {
+    color: coral;
+    font-weight: bold;
+}
+
+#navbarDropdown {
+    color:#fff;
+    cursor: pointer;
+}
+
+#searchbar {
+    width: 270px;
+    margin-left: 20px;
+}
+
+#searchbtn {
+    border: 1px solid white;
+    color: white;
+    margin-left: 10px;
+}
+
+#searchbtn:hover {
+    background-color: lightcoral;
+}
+
+/*Div Headers*/
+
+.divheader {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    color: white;
+}
+
+/*Filter Div*/
+#filterdiv {
+    margin-top: 20px;
+}
+
+#filterdivwrapper {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid coral;
+    padding-bottom: 20px;
+}
+
+#selectDepartment, #selectLocation, #selectEmployee {
+    width: 200px;
+    margin-left: 10px;
+}
+
+#filterSelect {
+    text-align: center;
+}
+
+#amendDatabase {
+    margin-top: 10px;
+}
+
+#resetBtn {
+    margin-left: 5px;
+    height: 32px;
+}
+
+/*Table Div*/
+
+#tablediv {
+    height: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#tablewrapper {
+    height: 800px;
+	overflow: auto;
+}
+
+#tablewrapper thead td { 
+    position: sticky; 
+    top: 0;
+    background-color: #4d4c57;
+    color: coral;
+    font-weight: bold;
+}
+
+#searchresulttable {    
+    width: 95%;
+    margin-left: 13px;
+    overflow-y: scroll;
+    color: white;
+    background-color: #4d4c57;
+    border-left: 1px solid coral;
+}
+
+#searchresulttable tr:nth-child(even){
+    background-color: #4d4c57;
+}
+
+#searchresulttable tr:nth-child(odd){
+    background-color: #696775;
+}
+
+#searchresulttable>thead>tr>td {
+    border-top: 1px solid coral;
+    border-bottom: 1px solid coral;
+    border-right: 1px solid coral;
+    border-left: 1px solid coral;
+}
+
+#searchresulttable>tbody>tr>td {
+    text-align: center;
+    border-bottom: 1px solid coral;
+    border-right: 1px solid coral;
+    border-left: 1px solid coral;
+}
+
+#searchresulttable>thead {
+    text-transform: uppercase;
+}
+
+/*Database Div*/
+
+#databaseeditdiv {
+    margin: 20px;
+    display: flex;
+}
+
+#databasetable {
+    color: white;
+    width: 50%;
+    margin-left: 5px;
+    margin-right: 0;
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+#logodiv {
+    height: 150px;
+    width: 150px;
+    margin-left: 225px;
+
+}
+
+/*Modals*/
+
+.modal {
+    font-size: small;
+}
+
+#addOptionBody, #deleteOptionBody, #editOptionBody { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#addEmployeeBtn, #deleteEmployeeBtn, #editEmployeeBtn, #addLocationBtn, #deleteLocationBtn, #editLocationBtn, #addDepartmentBtn, #deleteDepartmentBtn, #editDepartmentBtn {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em auto;
+}
+
+/*preloader*/
+
+#preloader {  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    z-index: 9999;  
+    overflow: hidden;  
+    background: #696775;
+}
+    
+#preloader:before {  
+    content: "";  
+    position: fixed;  
+    top: calc(50% - 30px);  
+    left: calc(50% - 30px);  
+    border: 6px solid #f2f2f2;  
+    border-top: 6px solid lightcoral ;  
+    border-radius: 50%;  
+    width: 60px;  
+    height: 60px;  
+    -webkit-animation: animate-preloader 1s linear infinite;  
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {   
+        -webkit-transform: rotate(0deg);    
+        transform: rotate(0deg);  
+    }  
+    100% {    
+        -webkit-transform: rotate(360deg);    
+        transform: rotate(360deg);  
+    }
+}
+
+@keyframes animate-preloader {  
+    0% {    
+        -webkit-transform: rotate(0deg);    
+        transform: rotate(0deg);  }  
+    
+    100% {    
+        -webkit-transform: rotate(360deg);    
+        transform: rotate(360deg);  
+    }
+}
+
+/* Mobile Screen */
+
+@media (max-width: 375px) and (max-height: 667px)
+  {
+
+    .navbar-brand {
+        font-size: 0.7em;
+    }
+
+    #searchbtn {
+        display: none;
+    }
+
+    #searchbar {
+        width: 150px;
+        font-size: 8px;
+    }
+
+    #tablediv {
+        height: 100%;
+    }
+
+    #selectDepartment, #selectLocation, #selectEmployee {
+        font-size: 10px;
+        width: 75px;
+    }
+
+    #addBtn, #deleteBtn, #editBtn {
+        font-size: 10px;
+    }
+
+    #searchresulttable {
+        font-size: 8px;
+    }
+
+    #thead{
+        font-size: 10px;
+    }
+
+    #searchresulttable tr td:nth-child(2), #searchresulttable tr td:nth-child(4),#searchresulttable tr td:nth-child(5) {
+        display:none;
+    }
+
+    .divheader {
+        font-size: 15px;
+    }
+
+    #tablewrapper {
+        height: 480px;
+        overflow: auto;
+    }
+
+    #databasetable tr td:nth-child(1){
+        font-size: 14px;
+        width: 200px;
+    }
+
+    #databaseeditdiv {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #logodiv {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+        padding-top: 20px;
+     }
+
+    .modal {
+        max-height: 95%;
+        font-size: small;
+    }
+
+  }
+
+  @media only screen 
+  and (max-height: 667px)
+  {
+
+    #logodiv {
+        display: none;
+    }
+
+
+  }
+
+  @media (max-height: 812px) and (max-width: 375px) {
+
+    .navbar-brand {
+        font-size: 0.7em;
+    }
+
+    #searchbtn {
+        display: none;
+    }
+
+    #searchbar {
+        width: 150px;
+        font-size: 8px;
+    }
+
+    #tablediv {
+        height: 100%;
+    }
+
+    #selectDepartment, #selectLocation, #selectEmployee {
+        font-size: 10px;
+        width: 75px;
+    }
+
+    #resetBtn {
+        margin-left: 5px;
+        font-size: 10px;
+        height: 26px;
+        width: 90px;
+    }
+
+    #addBtn, #deleteBtn, #editBtn {
+        font-size: 10px;
+    }
+
+    #searchresulttable {
+        font-size: 8px;
+    }
+
+    #thead{
+        font-size: 10px;
+    }
+
+    #searchresulttable tr td:nth-child(2), #searchresulttable tr td:nth-child(4),#searchresulttable tr td:nth-child(5) {
+        display:none;
+    }
+
+    .divheader {
+        font-size: 15px;
+    }
+
+    #databasetable{
+        width: 100%;
+        height: 160px;
+        text-align: left;
+    }
+
+    #tablewrapper {
+        overflow: auto;
+    }
+
+    #databasetable tr td:nth-child(1){
+        font-size: 14px;
+        width: 200px;
+    }
+
+    #databaseeditdiv {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #logodiv {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+        padding-top: 20px;
+     }
+
+    .modal {
+        max-height: 95%;
+        font-size: small;
+    }
+  }
+
+  
+
+  @media (max-height: 640px) and (max-width: 360px) {
+      #tablewrapper {
+          height: 410px;
+      }
+  }
+
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .navbar-brand {
+        font-size: 0.7em;
+    }
+
+    #searchbtn {
+        display: none;
+    }
+
+    #searchbar {
+        width: 150px;
+        font-size: 8px;
+    }
+
+    #tablediv {
+        height: 100%;
+    }
+
+    #selectDepartment, #selectLocation, #selectEmployee {
+        font-size: 10px;
+        width: 75px;
+    }
+
+    #addBtn, #deleteBtn, #editBtn {
+        font-size: 10px;
+    }
+
+    #searchresulttable {
+        font-size: 8px;
+    }
+
+    #thead{
+        font-size: 10px;
+    }
+
+    #searchresulttable tr td:nth-child(2), #searchresulttable tr td:nth-child(4),#searchresulttable tr td:nth-child(5) {
+        display:none;
+    }
+
+    .divheader {
+        font-size: 15px;
+    }
+
+    #databasetable{
+        width: 100%;
+        height: 160px;
+        text-align: left;
+    }
+
+    #tablewrapper {
+        /*height: 530px;*/
+        overflow: auto;
+    }
+
+    #databasetable tr td:nth-child(1){
+        font-size: 14px;
+        width: 200px;
+    }
+
+    #databaseeditdiv {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #logodiv {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+        padding-top: 20px;
+     }
+
+    .modal {
+        max-height: 95%;
+        font-size: small;
+    }
+
+    #resetBtn {
+        margin-left: 5px;
+        font-size: 10px;
+        height: 26px;
+        width: 90px;
+    }
+}
